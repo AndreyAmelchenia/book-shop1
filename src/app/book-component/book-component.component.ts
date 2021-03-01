@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BookModel, BookServiceService } from './book-service.service';
 
 @Component({
@@ -6,14 +6,16 @@ import { BookModel, BookServiceService } from './book-service.service';
   templateUrl: './book-component.component.html',
   styleUrls: ['./book-component.component.scss'],
 })
-export class BookComponentComponent {
+export class BookComponentComponent implements OnInit {
   public myBook: BookModel;
 
-  constructor(BookService: BookServiceService) {
-    this.myBook = BookService.getAll();
+  constructor(public myBookService: BookServiceService) {}
+
+  ngOnInit() {
+    this.myBook = this.myBookService.getAll();
   }
 
-  onBuy(name) {
+  onBuy(name: string) {
     console.log(this.myBook.name);
     console.log(name);
   }
