@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { BookModel, BookServiceService } from './book-service.service';
+import { BookModel, BookServiceService } from './book.service';
 
 @Component({
-  selector: 'app-book-component',
-  templateUrl: './book-component.component.html',
-  styleUrls: ['./book-component.component.scss'],
+  selector: 'app-book',
+  templateUrl: './book.component.html',
+  styleUrls: ['./book.component.scss'],
 })
 export class BookComponentComponent implements OnInit {
   public myBook: BookModel;

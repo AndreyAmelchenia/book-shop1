@@ -2,7 +2,7 @@
   <h1 class="mat-h1">Dashboard</h1>
   <mat-grid-list cols="3">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <app-book-component></app-book-component>
+      <app-book></app-book>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

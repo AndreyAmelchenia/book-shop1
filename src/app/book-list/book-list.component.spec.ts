@@ -7,16 +7,16 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
-import { MyDashboardComponent } from './my-dashboard.component';
+import { BookListComponent } from './book-list.component';
 
 describe('MyDashboardComponent', () => {
-  let component: MyDashboardComponent;
-  let fixture: ComponentFixture<MyDashboardComponent>;
+  let component: BookListComponent;
+  let fixture: ComponentFixture<BookListComponent>;
 
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        declarations: [MyDashboardComponent],
+        declarations: [BookListComponent],
         imports: [
           NoopAnimationsModule,
           LayoutModule,
@@ -31,7 +31,7 @@ describe('MyDashboardComponent', () => {
   );
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MyDashboardComponent);
+    fixture = TestBed.createComponent(BookListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
